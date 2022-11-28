@@ -5,13 +5,10 @@ const shortList = [1, 2, 3, 4, 5, 6]
 
 const longList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-let randomElement;
+let randomElement = 1;
 
-do{
-    randomElement= Math.floor(Math.random() * longList.length)
-    shortList.push(randomElement);
-} while(shortList.length - longList == 0)
-
-console.log(randomElement);
+while(shortList.length < longList.length){
+    shortList.push(randomElement)
+}
 
 console.log(shortList, longList);

@@ -5,6 +5,4 @@ let userNumber;
 
 do{
     userNumber = parseInt(prompt(`Inserisci un numero tra 1 e 10`));
-} while(userNumber > 10 || userNumber < 1 ) {
-
-}
+} while(userNumber > 10 || userNumber < 1 )

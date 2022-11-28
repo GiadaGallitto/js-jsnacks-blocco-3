@@ -9,8 +9,13 @@ let randomElement;
 
 while(shortList.length != longList.length){
     randomElement = Math.floor(Math.random() * longList.length);
-    shortList.push(randomElement);
     console.log(randomElement);
+    
+    if(shortList.length < longList.length){
+        shortList.push(randomElement);
+    } else if(shortList.length > longList.length){
+        longList.push(randomElement);
+    }
 }
 
 console.log(randomElement);

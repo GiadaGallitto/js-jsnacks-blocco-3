@@ -11,6 +11,8 @@ let sum = 0;
 while (sum <= 50){
     userNum = parseInt(prompt(`Inserisci un numero`));
     sum += userNum;
+    // Alla somma devo sommare il valore inserito dall'utente
+    // Per poi inserirlo nella lista vuota tramite un push
     numberList.push(userNum);
     
 }

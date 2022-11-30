@@ -18,16 +18,21 @@
 
 const array = [1,33,55,64,67,22,10,44];
 
-function newPElement(element){
+function newPElement(number){
     let pElement = document.createElement("p")
+    pElement.innerHTML += number
     return pElement;
 }
 
-const div = document.getElementById("red-div");
+const divRed = document.getElementById("red-div");
+
+const divGreen = document.getElementById("green-div");
 
 for (let i=0; i < array.length; i++){
 
     if(array[i] % 2 === 0){
-        div.append(newPElement(array[i]))
+        divGreen.append(newPElement(array[i]))
+    } else {
+        divRed.append(newPElement(array[i]))
     }
 }

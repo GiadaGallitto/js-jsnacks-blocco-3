@@ -16,7 +16,7 @@ for (let i = 0; i < 10; i++){
 
     randomNumber = (Math.floor(Math.random() * startingList.length) + 1);
 
-    if(randomNumber != randomNumber){
+    if(randomNumber != endingList[i]){
         endingList.push(randomNumber)
     }
 

@@ -10,15 +10,26 @@ const startingList = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
 
 const endingList = [];
 
-for (let i = 0; i < 10; i++){
+// Finchè la nuova lista non ha 10 elementi
+while(endingList.length < 10){
+    
+    // Genera un numero randomico che vada da zero fino alla lunghezza della lista starting (con l'uso della funzione apposita)
+    const randomNumber = getRandomNumber(0, startingList.length - 1);
+    
+    // Se l'elemento randomico della startingList non è già incluso nella endingList
+    if(!endingList.includes(startingList[randomNumber])){
+        // Allora lo aggiungo nella nuova lista
+        endingList.push(startingList[randomNumber])
+    }   // Altrimenti vado avanti con la ricerca
 
-    let randomNumber;
+}
 
-    randomNumber = (Math.floor(Math.random() * startingList.length) + 1);
+console.log(endingList)
 
-    if(randomNumber != endingList[i]){
-        endingList.push(randomNumber)
+function getRandomNumber(numMin, numMax){
+    if (numMin === numMax){
+        return numMax
     }
 
-    console.log(endingList)
+    return Math.floor(Math.random() * (numMax - numMin + 1) + numMin);
 }
